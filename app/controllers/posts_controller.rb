@@ -5,6 +5,12 @@ class PostsController < ApplicationController
     end
     
     def show
-        @post = Post.find(paarams[:id])
+        @post = Post.find(params[:id])
+    end
+    
+    def new
+    end
+    
+    def create
     end
 end
