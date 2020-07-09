@@ -1,5 +1,5 @@
-<h2>Add New Post</h2>
-<%= form_for :post, url: posts_path do |f| %>
+<h2>Edit Post</h2>
+<%= form_for @post, url: post_path(@post) do |f| %>
 <p>
     <%= f.text_field :title, placeholder: 'enter title' %>
     <% if @post.errors.messages[:title].any? %>
