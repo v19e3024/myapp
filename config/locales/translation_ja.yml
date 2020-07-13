@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      post: 役職  #g
+
+    attributes:
+      post:
+        body: 体  #g
+        title: 題名  #g
