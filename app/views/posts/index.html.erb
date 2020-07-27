@@ -10,7 +10,7 @@
     <div>
         <%= link_to post.title, post_path(post) %>
         <% if post.comments.any? %>
-            <span class="badge badge-primary badge-pill"><%= post.comments.size %></apan>
+            <span class="badge badge-primary badge-pill"><%= post.comments.size %></span>
         <% end %>
         <br/>
         <span class='text-secondary'>
