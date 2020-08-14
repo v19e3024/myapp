@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  signin_name     :string
+#  display_name    :string
+#  password_digest :string
+#  status          :string           default("available")
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+one:
+  signin_name: MyString
+  display_name: MyString
+  password_digest: MyString
+  status: MyString
+
+two:
+  signin_name: MyString
+  display_name: MyString
+  password_digest: MyString
+  status: MyString
