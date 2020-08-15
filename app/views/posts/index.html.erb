@@ -1,11 +1,13 @@
-<div class="d-flex justify-content-between">
+<div class="d-flex-column justify-content-between">
     <div>
         <%= render 'signin' %>
     </div>
     <div class="d-flex justify-content-between">
     <h2>My Posts</h2>
     <div>
-        <%= link_to t('.add_new'), new_post_path, class: 'btn btn-sm btn-primary' %>
+        <% if session[:user_id] %>
+            <%= link_to t('.add_new'), new_post_path, class: 'btn btn-sm btn-primary' %>
+        <% end %>
     </div>
 </div>
 <ul class="list-group mt-2">

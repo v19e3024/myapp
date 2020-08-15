@@ -5,3 +5,10 @@ en:
       confirm: Sure to delete?
       delete: Delete
       edit: Edit
+    signin:
+      signin: Sign In
+      signout: Sign Out
+      signup: Sign Up
+  users:
+    form:
+      cancel: Cancel

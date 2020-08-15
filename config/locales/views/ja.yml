@@ -5,3 +5,10 @@ ja:
       confirm: 本当に削除しますか？
       delete: 削除
       edit: 編集
+    signin:
+      signin: サインイン
+      signout: サインアウト
+      signup: サインアップ
+  users:
+    form:
+      cancel: キャンセル

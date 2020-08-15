@@ -1,0 +1,33 @@
+<%= form_for @user do |f| %>
+<p>
+    <%= f.text_field :signin_name, placeholder: 'signin_name' %>
+    <% if @user.errors.messages[:signin_name].any? %>
+    <span class="error"><%= @user.errors.messages[:signin_name][0] %></span>
+    <% end %>
+</p>
+<p>
+    <%= f.text_field :display_name, placeholder: 'display_name' %>
+    <% if @user.errors.messages[:display_name].any? %>
+    <span class="error"><%= @user.errors.messages[:display_name][0] %></span>
+    <% end %>
+</p>
+<p>
+    <%= f.text_field :password, placeholder: 'password' %>
+    <% if @user.errors.messages[:password].any? %>
+    <span class="error"><%= @user.errors.messages[:password][0] %></span>
+    <% end %>
+</p>
+<p>
+    <%= f.text_field :password_confirmation, placeholder: 'password_confirmation' %>
+    <% if @user.errors.messages[:password_confirmation].any? %>
+    <span class="error"><%= @user.errors.messages[:password_confirmation][0] %></span>
+    <% end %>
+</p>
+<p>
+    <%= f.submit class: 'btn btn-primary' %>
+</p>
+<% end %>
+
+<p>
+    <%= link_to t('.cancel'), posts_path, class: 'btn btn-secondary' %>
+</p>
