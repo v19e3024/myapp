@@ -1,4 +1,5 @@
 <h2><%= @post.title %></h2>
+<p class="text-right"><%= User.find_by(id: @post.user_id).display_name %></p>
 <p><%= simple_format @post.body %></p>
 
 <h3>Comments</h3>

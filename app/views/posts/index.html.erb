@@ -5,7 +5,7 @@
     <div class="d-flex justify-content-between">
     <h2>My Posts</h2>
     <div>
-        <% if session[:user_id] %>
+        <% if current_user %>
             <%= link_to t('.add_new'), new_post_path, class: 'btn btn-sm btn-primary' %>
         <% end %>
     </div>
@@ -23,18 +23,20 @@
             <%= l(post.created_at, format: :long) %>
         </span>
     </div>
-    <div class="dropdown">
-        <button class="btn btn-sm btn-link dropdown-toggle p-0" data-toggle="dropdown">
-        </button>
-        <div class="dropdown-menu">
-            <%= link_to t('.delete'),
-            post_path(post),
-            method: :delete,
-            class: 'dropdown-item',
-            data: { confirm: t('.confirm') } %>
-            <%= link_to t('.edit'), edit_post_path(post), class: 'dropdown-item' %>
+    <% if current_user && current_user.id==post.user_id%>
+        <div class="dropdown">
+            <button class="btn btn-sm btn-link dropdown-toggle p-0" data-toggle="dropdown">
+            </button>
+            <div class="dropdown-menu">
+                <%= link_to t('.delete'),
+                post_path(post),
+                method: :delete,
+                class: 'dropdown-item',
+                data: { confirm: t('.confirm') } %>
+                <%= link_to t('.edit'), edit_post_path(post), class: 'dropdown-item' %>
+            </div>
         </div>
-    </div>
+    <% end %>
 </li>
 <% end %>
 </ul>
